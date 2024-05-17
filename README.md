@@ -184,6 +184,32 @@ COUNTER
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/a1fc5f68-aafb-49a1-93d2-779529f525fa)
 
+UPDOWN COUNTER:
+module updown(clk,rst,up_down,count);
+
+input clk,rst,up_down;
+
+output reg[3:0]count;
+
+always@(posedge clk)
+
+begin
+
+if(rst==1)
+
+count <= 4'b0000;
+
+else if (up_down == 1'b1)
+
+count <= count + 1'b1;
+
+else
+
+count <= count-1'b1;
+
+end
+
+endmodule
 
 OUTPUT WAVEFORM:
 ![image](https://github.com/212221060203/VLSI-LAB-EXP-4/assets/166364913/ba0e1a05-3b11-4a6f-8c1f-248eded42ec5)
